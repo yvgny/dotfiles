@@ -3,7 +3,7 @@ EXCEPTION=('.gitignore' '.git' '.gitmodules' 'README.md' '.' '..' 'setup.sh')
 BACKUP_FOLDER='.dotfiles_backup'
 
 # Download Git submodules
-cd "$HOME/\.dotfiles"
+cd "$HOME/.dotfiles"
 git submodule init && git submodule update --remote
 cd $HOME
 
