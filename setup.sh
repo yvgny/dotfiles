@@ -4,7 +4,8 @@ BACKUP_FOLDER='.dotfiles_backup'
 
 # Download Git submodules
 cd "$HOME/.dotfiles"
-git submodule init && git submodule update --remote
+git submodule init
+git submodule update --remote || git submodule update --recursive
 cd $HOME
 
 # Select of the config file
