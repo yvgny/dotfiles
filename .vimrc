@@ -11,6 +11,7 @@ set noshowmode			" let airline do the work
 set statusline+=%#warningmsg#			" Syntastic config
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set clipboard=unnamedplus	" allow copying to the system clipboard
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
