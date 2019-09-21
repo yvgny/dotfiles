@@ -12,6 +12,13 @@ set statusline+=%#warningmsg#			" Syntastic config
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set clipboard=unnamedplus	" allow copying to the system clipboard
+:set number relativenumber
+
+:augroup numbertoggle 		" set absolute line numbers in insert mode, otherwise relative
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
