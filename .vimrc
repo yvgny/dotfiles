@@ -12,7 +12,8 @@ set statusline+=%#warningmsg#			" Syntastic config
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set clipboard=unnamedplus	" allow copying to the system clipboard
-:set number relativenumber
+set mouse=a			" mouse now scroll intuitively
+set hlsearch			" Highlight search terms
 
 :augroup numbertoggle 		" set absolute line numbers in insert mode, otherwise relative
 :  autocmd!
@@ -27,5 +28,10 @@ let g:syntastic_check_on_wq = 0			" End of Systastic config
 let g:autoformat_autoindent = 0			" Disable fallback on VIM indents for autoformat
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0	" end of fallback prevention
+
+" Key mappings
 map <silent> <C-n> :NERDTreeFocus<CR>		" Map NERTreeFOcus on CTRL-n
+nnoremap <CR> :noh<CR><CR>			" End search highlight with Return
+let mapleader = " "
+
 
