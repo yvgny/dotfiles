@@ -10,4 +10,4 @@ alias gp="git push"
 alias gl="git log --graph --oneline"
 alias ls="ls -G"
 alias glog="git log --all --decorate --oneline --graph"
-
+alias la="ls -la"
