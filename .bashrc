@@ -12,5 +12,7 @@ alias ls="ls -G"
 alias glog="git log --all --decorate --oneline --graph"
 alias la="ls -la"
 
+alias weather='function _weather(){ curl "v2.wttr.in/$1"; };_weather'
+
 # Disable terminal flow control
 stty start undef stop undef
