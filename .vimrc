@@ -39,8 +39,14 @@ let g:autoformat_remove_trailing_spaces = 0	" end of fallback prevention
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'go': ['gofmt', 'goimports'],
 \}
-" let g:ale_fix_on_save = 1
+
+let g:ale_linters = {
+\   'go': ['gopls']
+\}
+
+let g:ale_fix_on_save = 1
 " let g:ale_lint_on_text_changed = 'always'
 
 " Key mappings
