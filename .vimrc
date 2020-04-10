@@ -45,8 +45,11 @@ let g:ale_fixers = {
 \   'cpp': ['clang-format'],
 \}
 
+let g:ale_cpp_clang_options = '-std=c++17 -Wall'
+
 let g:ale_linters = {
-\   'go': ['gopls']
+\   'go': ['gopls'],
+\   'cpp': ['clang', 'ccls']
 \}
 
 let g:ale_fix_on_save = 1
@@ -63,5 +66,11 @@ nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 " Move between errors in ALE quickly
 nmap <silent> <C-j> <Plug>(ale_previous_wrap)
 nmap <silent> <C-k> <Plug>(ale_next_wrap)
+
+:command Def ALEGoToDefinition
+:command Vdef ALEGoToDefinitionInVSplit
+:command Sdef ALEGoToDefinitionInSplit
+:command Ref ALEFindReferences
+:command Undotree UndotreeToggle
 
 let mapleader = " "
