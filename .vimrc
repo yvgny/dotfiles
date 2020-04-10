@@ -57,7 +57,7 @@ let g:ale_fix_on_save = 1
 
 " Key mappings
 " Map NERTreeFOcus on CTRL-n
-nnoremap <silent> <C-n> :NERDTreeFocus<CR>
+nnoremap <silent> <C-n> :Explore<CR>
 " nnoremap <silent> <C-n> :Lexplore<CR>
 
 " End search highlight with Return
@@ -66,6 +66,10 @@ nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 " Move between errors in ALE quickly
 nmap <silent> <C-j> <Plug>(ale_previous_wrap)
 nmap <silent> <C-k> <Plug>(ale_next_wrap)
+
+" Ctrl-P config
+let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_cmd = 'CtrlP'
 
 :command Def ALEGoToDefinition
 :command Vdef ALEGoToDefinitionInVSplit
