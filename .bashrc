@@ -10,9 +10,12 @@ alias gp="git push"
 alias gl="git log --graph --oneline"
 alias ls="ls -G"
 alias glog="git log --all --decorate --oneline --graph"
-alias la="ls -la"
+alias la="ls -Fla"
 
 alias weather='function _weather(){ curl "v2.wttr.in/$1"; };_weather'
 
 # Disable terminal flow control
 stty start undef stop undef
+
+# Vim-style command line editing
+set -o vi

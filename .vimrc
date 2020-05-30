@@ -43,16 +43,22 @@ let g:ale_fixers = {
 \   'go': ['gofmt', 'goimports'],
 \   'c': ['clang-format'],
 \   'cpp': ['clang-format'],
+\   'python': ['autopep8', 'black'],
 \}
 
 let g:ale_cpp_clang_options = '-std=c++17 -Wall'
+let g:ale_python_black_options = '--line--length 79'
+let g:ale_python_flake8_executable = 'python3'
+let g:ale_python_flake8_options = '-m flake8'
 
 let g:ale_linters = {
 \   'go': ['gopls'],
-\   'cpp': ['clang', 'ccls']
+\   'cpp': ['ccls'],
+\   'python': ['flake8']
 \}
 
-let g:ale_fix_on_save = 1
+let g:ale_c_clangtidy_executable = '/usr/local/opt/llvm/bin/clang-tidy'
+let g:ale_fix_on_save = 0
 " let g:ale_lint_on_text_changed = 'always'
 
 " Key mappings
@@ -71,10 +77,15 @@ nmap <silent> <C-k> <Plug>(ale_next_wrap)
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_cmd = 'CtrlP'
 
+"AutoPairs config
+let g:AutoPairsMultilineClose = 0
+
+
 :command Def ALEGoToDefinition
 :command Vdef ALEGoToDefinitionInVSplit
 :command Sdef ALEGoToDefinitionInSplit
 :command Ref ALEFindReferences
 :command Undotree UndotreeToggle
+:command Fix ALEFix
 
 let mapleader = " "
