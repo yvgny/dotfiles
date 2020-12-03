@@ -53,7 +53,8 @@ let g:ale_python_flake8_options = '-m flake8'
 
 let g:ale_linters = {
 \   'go': ['gopls'],
-\   'cpp': ['ccls'],
+\   'c': ['gcc'],
+\   'cpp': ['gcc'],
 \   'python': ['flake8']
 \}
 
