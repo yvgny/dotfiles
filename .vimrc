@@ -74,6 +74,10 @@ nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 nmap <silent> <C-j> <Plug>(ale_previous_wrap)
 nmap <silent> <C-k> <Plug>(ale_next_wrap)
 
+" CTRL-r in visual mode prompts for a replacement text, then y or n to confirm
+" each choice
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 " Ctrl-P config
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_cmd = 'CtrlP'
