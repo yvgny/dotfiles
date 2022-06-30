@@ -34,3 +34,6 @@
 [submodule ".vim/bundle/rust.vim"]
 	path = .vim/pack/default/start/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule ".vim/pack/default/start/vim-markdown-toc"]
+	path = .vim/pack/default/start/vim-markdown-toc
+	url = https://github.com/mzlogin/vim-markdown-toc.git
