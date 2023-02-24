@@ -3,9 +3,9 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Useful aliases
 alias gs="git status"
-alias gc="git commit"
-alias gca="git commit -a"
-alias gcam="git commit -a -m"
+alias gc="git commit -sS"
+alias gca="git commit -sS -a"
+alias gcam="git commit -sS -a -m"
 alias gp="git push"
 alias gl="git log --graph --oneline"
 alias ls="ls -G"

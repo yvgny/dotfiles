@@ -21,6 +21,7 @@ set splitright                  " Split are openend to the right of current spli
 set splitbelow                  " Split are openend below the current split
 set breakindent                 " Keep same identation when wrapping line
 set wrap                        " Do wrap line
+set wrap smoothscroll           " Prevent choppy behavior when big lines are wrapped
 set lbr                         " Do not break words when wrapping a line
 set ignorecase smartcase        " Search is case sensitive only when at least one upper case letter is typed
 set timeoutlen=1000 ttimeoutlen=0 " Remove delay when exiting insert mode
