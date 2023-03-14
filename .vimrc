@@ -49,14 +49,15 @@ let g:ale_fixers = {
 
 let g:ale_cpp_clang_options = '-std=c++17 -Wall'
 let g:ale_python_black_options = '--line--length 79'
-let g:ale_python_flake8_executable = 'python3'
-let g:ale_python_flake8_options = '-m flake8'
+let g:ale_python_auto_pipenv = 1
+let g:ale_python_auto_poetry = 1
+let g:ale_python_auto_virtualenv = 1
 
 let g:ale_linters = {
 \   'go': ['gopls'],
 \   'c': ['gcc'],
 \   'cpp': ['gcc'],
-\   'python': ['flake8']
+\   'python': ['flake8', 'pyright']
 \}
 
 let g:ale_c_clangtidy_executable = '/usr/local/opt/llvm/bin/clang-tidy'
